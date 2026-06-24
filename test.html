@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirkhan Oev | Official Website</title>
+    <meta name="description" content="The official platform of Amirkhan Oev.">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Oswald:200,300,400,500,600,700|Lato:100,300,400,700,900|Bangers" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* HEADER */
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 25px 0;
+            background: transparent;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(171, 22, 22);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lang-switch {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            padding: 6px 12px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            border-radius: 4px;
+        }
+
+        .lang-btn:hover {
+            color: rgb(171, 22, 22);
+            background: rgba(171, 22, 22, 0.1);
+        }
+
+        .lang-btn.active {
+            color: rgb(171, 22, 22);
+            font-weight: 700;
+        }
+
+        .lang-divider {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            padding: 289px 0 15px;
+            background-image: url('1.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.62);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .hero-title {
+            font-family: 'Bangers', cursive;
+            font-size: 64px;
+            font-weight: 400;
+            color: rgb(171, 22, 22);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 64px;
+            font-weight: 400;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* CONTENDER */
+        .contender-section {
+            padding: 50px 0 120px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .contender-row {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contender-image {
+            flex: 1;
+        }
+
+        .contender-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .contender-content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Bangers', cursive;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+
+        .section-text {
+            font-size: 25px;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 42px;
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.5s;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: rgb(171, 22, 22);
+            color: #fff;
+            border: 2px solid rgb(171, 22, 22);
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(171, 22, 22, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* QUOTE */
+        .quote-section {
+            position: relative;
+            padding: 287px 0 271px;
+            background-image: url('3.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .quote-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.71);
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-text {
+            font-size: 32px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        /* INSTAGRAM */
+        .instagram-section {
+            padding: 75px 0;
+            background-color: #000;
+            text-align: center;
+        }
+
+        .section-title-instagram {
+            font-size: 80px;
+            font-weight: 400;
+            color: rgb(171, 22, 22);
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .instagram-image {
+            margin-bottom: 30px;
+        }
+
+        .instagram-image img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .instagram-button {
+            margin-top: 30px;
+        }
+
+        /* TELEGRAM */
+        .telegram-section {
+            position: relative;
+            padding: 344px 0 258px;
+            background-image: url('4.png');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .telegram-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.64);
+        }
+
+        .telegram-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title-telegram {
+            font-family: 'Bangers', cursive;
+            font-size: 64px;
+            font-weight: 400;
+            color: rgb(171, 22, 22);
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .telegram-content {
+            margin-bottom: 30px;
+        }
+
+        .telegram-text {
+            font-size: 64px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .telegram-button {
+            margin-top: 30px;
+        }
+
+        /* MEDIA */
+        .media-section {
+            padding: 80px 0;
+            background-color: #000;
+            text-align: center;
+        }
+
+        .section-title-media {
+            font-size: 80px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .media-item {
+            text-align: center;
+        }
+
+        .media-item img {
+            width: 100%;
+            max-width: 47%;
+            height: auto;
+            margin: 0 auto 15px;
+            transition: transform 0.5s;
+        }
+
+        .media-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .media-item h5 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .media-item h5 a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.5s;
+        }
+
+        .media-item h5 a:hover {
+            color: rgb(171, 22, 22);
+        }
+
+        /* CONTACT */
+        .contact-section {
+            padding: 32px 0 100px;
+            background-color: #000;
+        }
+
+        .contact-row {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 6px;
+            box-shadow: 0 40px 40px -25px rgba(0,0,0,0.26);
+        }
+
+        .contact-info {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .contact-title {
+            font-size: 56px;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.3;
+        }
+
+        .contact-image {
+            flex: 0 0 17.7%;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .contact-form-wrapper {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* POPUP */
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .popup.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            position: relative;
+            margin: 5% auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            background-color: #fff;
+            border-radius: 6px;
+            animation: slideInUp 0.5s;
+        }
+
+        .popup-form {
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            color: #fff;
+            font-size: 47px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: rgb(171, 22, 22);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.5s;
+            border: none;
+            line-height: 1;
+        }
+
+        .popup-close:hover {
+            background-color: #000;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .contact-form h5 {
+            font-size: 32px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .contact-form p {
+            font-size: 18px;
+            color: #73777f;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px 24px;
+            margin-bottom: 15px;
+            border: 1px solid #dcdfe5;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Lato', sans-serif;
+            color: #73777f;
+            background: #fff;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: rgb(171, 22, 22);
+        }
+
+        .contact-form textarea {
+            height: 165px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: rgba(0,0,0,0.8);
+            color: rgba(255,255,255,0.8);
+            padding: 14px 42px;
+            border-radius: 4px;
+            width: 70%;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover {
+            background-color: rgba(0,0,0,1);
+            color: rgba(255,255,255,1);
+        }
+         .img5{
+            border-radius: 25%;
+         }
+        /* ANIMATIONS */
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .hero-title,
+            .hero-subtitle {
+                font-size: 50px;
+            }
+            
+            .contender-row {
+                flex-direction: column;
+            }
+            
+            .quote-text {
+                font-size: 26px;
+            }
+            
+            .section-title-instagram,
+            .section-title-media {
+                font-size: 60px;
+            }
+            
+            .telegram-text {
+                font-size: 44px;
+            }
+            
+            .contact-row {
+                flex-direction: column;
+                padding: 30px;
+            }
+            
+            .contact-title {
+                font-size: 44px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                padding: 15px 0;
+            }
+            
+            .logo-text {
+                font-size: 16px;
+            }
+            
+            .lang-btn {
+                font-size: 14px;
+                padding: 4px 8px;
+            }
+            
+            .hero {
+                padding: 150px 0 33px;
+            }
+            
+            .hero-title,
+            .hero-subtitle {
+                font-size: 38px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .section-text {
+                font-size: 17px;
+            }
+            
+            .quote-section {
+                padding: 196px 0 16px;
+            }
+            
+            .quote-text {
+                font-size: 22px;
+            }
+            
+            .section-title-instagram,
+            .section-title-media {
+                font-size: 44px;
+            }
+            
+            .telegram-section {
+                padding: 229px 0 75px;
+            }
+            
+            .section-title-telegram {
+                font-size: 44px;
+            }
+            
+            .telegram-text {
+                font-size: 30px;
+            }
+            
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .media-item img {
+                max-width: 61%;
+            }
+            
+            .contact-title {
+                font-size: 30px;
+            }
+            
+            .popup-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .popup-close {
+                top: -15px;
+                right: -10px;
+                font-size: 35px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .btn-submit {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="logo">
+                    <p class="logo-text"><strong data-i18n="logoName">AMIRKHAN OEV</strong></p>
+                </div>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-i18n="heroTitle">AMIRKHAN OEV</h1>
+                <h3 class="hero-subtitle" data-i18n="heroSubtitle">MY PATH. MY FIGHT.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contender -->
+    <section class="contender-section">
+        <div class="container">
+            <div class="contender-row">
+                <div class="contender-image">
+                    <img src="2.png" alt="Amirkhan Oev">
+                </div>
+                <div class="contender-content">
+                    <h2 class="section-title" data-i18n="contenderTitle">BORN TO FIGHT</h2>
+                    <p class="section-text" data-i18n="contenderText">I compete at the highest level where only the strongest survive. No doubts. No excuses. Just one goal — to become the best in the world.</p>
+                    <div class="video-button">
+                        <button class="btn btn-primary" data-i18n="videoBtn" >VIDEO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram -->
+    <section class="telegram-section">
+        <div class="telegram-background"></div>
+        <div class="container">
+            <h2 class="section-title-telegram" data-i18n="telegramTitle">TELEGRAM EXCLUSIVE</h2>
+            <div class="telegram-content">
+                <p class="telegram-text" data-i18n="telegramText1">Here I am real.</p>
+                <p class="telegram-text" data-i18n="telegramText2">No censorship. No filters.</p>
+            </div>
+            <div class="telegram-button">
+                <a href="https://t.me/amirkhanoev?ysclid=mqlncputw4111384572" target="_blank" class="btn btn-primary" data-i18n="telegramBtn">JOIN</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media -->
+    <section class="media-section">
+        <div class="container">
+            <h2 class="section-title-media" data-i18n="mediaTitle">MEDIA</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <a href="https://www.sherdog.com/fighter/Amirkhan-Oev-342049" target="_blank">
+                        <img src="https://armanufc.com/wp-content/uploads/2025/12/1.webp" alt="Sherdog">
+                    </a>
+                    <h5><a href="https://www.sherdog.com/fighter/Amirkhan-Oev-342049" target="_blank">SHERDOG</a></h5>
+                </div>
+                <div class="media-item">
+                    <a href="https://www.instagram.com/0ev.amirkhan?igsh=ZmF3NTV3YzdsanNr">
+                        <img class="img5" src="https://avatars.mds.yandex.net/i?id=5e2c6f9a512ec2fe0ea9593bb2a68b32669881f0-5234508-images-thumbs&n=13" alt="FIGTH">
+                    </a>
+                    <h5><a href="https://www.instagram.com/0ev.amirkhan?igsh=ZmF3NTV3YzdsanNr" target="_blank">INSTAGRAM</a></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-row">
+                <div class="contact-info">
+                    <p class="contact-subtitle" data-i18n="contactSubtitle">START YOUR PROJECT WITH A CHAMPION</p>
+                    <h2 class="contact-title" data-i18n="contactTitle">LET'S TALK</h2>
+                </div>
+                <div class="contact-image">
+                    
+                </div>
+                <div class="contact-form-wrapper">
+                    <button class="btn btn-primary" data-i18n="contactBtn" onclick="openPopup('contact-popup')">SEND PROPOSAL</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Popup -->
+    <div id="video-popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup('video-popup')">&times;</button>
+            <div class="video-wrapper">
+                <iframe src="" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Popup -->
+    <div id="contact-popup" class="popup">
+        <div class="popup-content popup-form">
+            <button class="popup-close" onclick="closePopup('contact-popup')">&times;</button>
+            <h5 data-i18n="formTitle">PARTNERSHIP FORM</h5>
+            <p data-i18n="formText">Please leave your contact details and a summary of your proposal. A manager will get back to you shortly.</p>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="email" data-i18n-placeholder="emailPlaceholder" placeholder="EMAIL ADDRESS" required>
+                <input type="tel" data-i18n-placeholder="phonePlaceholder" placeholder="Phone Number" required>
+                <input type="text" data-i18n-placeholder="namePlaceholder" placeholder="Your Name" required>
+                <input type="text" data-i18n-placeholder="brandPlaceholder" placeholder="Brand / Company" required>
+                <textarea data-i18n-placeholder="proposalPlaceholder" placeholder="Proposal Summary" required></textarea>
+                <button type="submit" class="btn btn-submit" data-i18n="sendBtn">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // TRANSLATIONS
+        const translations = {
+            en: {
+                logoName: "AMIRKHAN OEV",
+                heroTitle: "AMIRKHAN OEV",
+                heroSubtitle: "MY PATH. MY FIGHT.",
+                contenderTitle: "BORN TO FIGHT",
+                contenderText: "I compete at the highest level where only the strongest survive. No doubts. No excuses. Just one goal — to become the best in the world.",
+                videoBtn: "VIDEO",
+                quote1: '"I don\'t choose easy paths.',
+                quote2: 'I seek the strongest to break their will and prove that I am the best in the world."',
+                instagramTitle: "@AMIRKHAN_OEV",
+                instagramBtn: "INSTAGRAM",
+                telegramTitle: "TELEGRAM EXCLUSIVE",
+                telegramText1: "Here I am real.",
+                telegramText2: "No censorship. No filters.",
+                telegramBtn: "JOIN",
+                mediaTitle: "MEDIA",
+                contactSubtitle: "START YOUR PROJECT WITH A CHAMPION",
+                contactTitle: "LET'S TALK",
+                contactBtn: "SEND PROPOSAL",
+                formTitle: "PARTNERSHIP FORM",
+                formText: "Please leave your contact details and a summary of your proposal. A manager will get back to you shortly.",
+                emailPlaceholder: "EMAIL ADDRESS",
+                phonePlaceholder: "Phone Number",
+                namePlaceholder: "Your Name",
+                brandPlaceholder: "Brand / Company",
+                proposalPlaceholder: "Proposal Summary",
+                sendBtn: "SEND"
+            },
+            ru: {
+                logoName: "АМИРХАН ОЕВ",
+                heroTitle: "АМИРХАН ОЕВ",
+                heroSubtitle: "МОЙ ПУТЬ. МОЙ БОЙ.",
+                contenderTitle: "РОЖДЁННЫЙ СРАЖАТЬСЯ",
+                contenderText: "Я выступаю на высшем уровне, где выживают только сильнейшие. Никаких сомнений. Никаких оправданий. Только одна цель — стать лучшим в мире.",
+                videoBtn: "ВИДЕО",
+                quote1: '"Я не выбираю лёгких путей.',
+                quote2: 'Я ищу сильнейших, чтобы сломить их волю и доказать, что я лучший в мире."',
+                instagramTitle: "@AMIRKHAN_OEV",
+                instagramBtn: "INSTAGRAM",
+                telegramTitle: "ЭКСКЛЮЗИВ В TELEGRAM",
+                telegramText1: "Здесь я настоящий.",
+                telegramText2: "Без цензуры. Без фильтров.",
+                telegramBtn: "ПОДПИСАТЬСЯ",
+                mediaTitle: "МЕДИА",
+                contactSubtitle: "НАЧНИТЕ ПРОЕКТ С ЧЕМПИОНОМ",
+                contactTitle: "ДАВАЙТЕ ОБСУДИМ",
+                contactBtn: "ОТПРАВИТЬ ЗАЯВКУ",
+                formTitle: "ФОРМА ПАРТНЁРСТВА",
+                formText: "Оставьте ваши контактные данные и краткое описание предложения. Менеджер свяжется с вами в ближайшее время.",
+                emailPlaceholder: "EMAIL",
+                phonePlaceholder: "Номер телефона",
+                namePlaceholder: "Ваше имя",
+                brandPlaceholder: "Бренд / Компания",
+                proposalPlaceholder: "Описание предложения",
+                sendBtn: "ОТПРАВИТЬ"
+            }
+        };
+
+        // LANGUAGE SWITCHER
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+
+            localStorage.setItem('siteLang', lang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            document.documentElement.lang = lang;
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setLanguage(btn.dataset.lang);
+            });
+        });
+
+        const savedLang = localStorage.getItem('siteLang') || 'en';
+        setLanguage(savedLang);
+
+        // POPUP FUNCTIONS
+        function openPopup(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
+            
+            if (id === 'video-popup') {
+                const iframe = document.querySelector('#video-popup iframe');
+                if (iframe) {
+                    const src = iframe.src;
+                    iframe.src = src;
+                }
+            }
+        }
+
+        document.querySelectorAll('.popup').forEach(popup => {
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    closePopup(popup.id);
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.popup.active').forEach(popup => {
+                    closePopup(popup.id);
+                });
+            }
+        });
+
+        // FORM HANDLER
+        function handleSubmit(e) {
+            e.preventDefault();
+            const lang = localStorage.getItem('siteLang') || 'en';
+            const message = lang === 'ru' 
+                ? 'Заявка отправлена! Мы свяжемся с вами в ближайшее время.'
+                : 'Proposal sent successfully! We will contact you shortly.';
+            alert(message);
+            e.target.reset();
+            closePopup('contact-popup');
+        }
+    </script>
+</body>
+</html>
